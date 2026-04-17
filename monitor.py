@@ -2,13 +2,13 @@ import requests
 from netmiko import ConnectHandler
 from datetime import datetime
 
-TOKEN = "YOUR_TOKEN"           # توکن جدیدت را بگذار
+TOKEN = "YOUR_TOKEN"           
 CHAT_ID = "1125224994"
 
 ROUTERS = [
     {"name": "R1", "host": "192.168.20.1"},
     {"name": "R2", "host": "192.168.40.1"},
-    {"name": "R3", "host": "10.0.0.4"},    # اگر IP مدیریتی R3 چیز دیگری است، عوضش کن
+    {"name": "R3", "host": "10.0.0.4"},    
 ]
 
 USERNAME = "admin"
@@ -85,7 +85,7 @@ def main():
     if alerts:
         send_telegram(f"📡 Network Alert ({now})\n\n" + "\n\n".join(alerts))
     else:
-        # برای جلوگیری از اسپم، این خط را می‌توانی کامنت کنی
+        
         # send_telegram(f"✅ Network OK ({now})")
         pass
 
